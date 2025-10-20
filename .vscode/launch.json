@@ -2,12 +2,19 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "type": "java",
-      "name": "Run Principal",
-      "request": "launch",
-      "mainClass": "main.Principal",
-      "projectName": "Practica_Multiprocesos",
-      "console": "integratedTerminal"
+        "type": "java",
+        "name": "Principal",
+        "request": "launch",
+        "mainClass": "main.Principal",
+        "projectName": "Practica_Multiprocesos_c55b7dc4"
+    },
+    {
+        "type": "java",
+        "name": "Run Principal",
+        "request": "launch",
+        "mainClass": "main.Principal",
+        "projectName": "Practica_Multiprocesos",
+        "console": "integratedTerminal"
     }
-  ]
+]
 }

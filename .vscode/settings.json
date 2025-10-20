@@ -1,7 +1,4 @@
 {
-  "java.project.sourcePaths": ["src"],
-  "java.configuration.checkProjectSettingsExclusions": false,
-  "java.compile.nullAnalysis.mode": "automatic",
-  "java.format.settings.url": "https://raw.githubusercontent.com/redhat-developer/vscode-java/master/java-formatter.xml",
-  "java.format.settings.profile": "GoogleStyle"
+  "java.project.outputPath": "bin",
+  "java.project.sourcePaths": ["src"]
 }

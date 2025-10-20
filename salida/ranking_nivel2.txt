@@ -1,0 +1,7 @@
+=== NIVEL2 ===
+Top 5 jugadores:
+Carla, 240
+Marta, 150
+Media: 195,00
+Máx: 240
+Mín: 150

@@ -1,9 +1,12 @@
+package main;
+
 import java.io.*;
 import java.util.*;
 
-public class procesarNivel {
+public class ProcesarNivel {
 
     public static void main(String[] args) throws Exception {
+        // Comprobación de argumentos
         if (args.length == 0) {
             System.out.println("No se especificó el nivel.");
             return;
@@ -25,7 +28,7 @@ public class procesarNivel {
             while ((linea = br.readLine()) != null) {
                 String[] partes = linea.split(",");
                 if (partes.length == 3 && partes[2].trim().equalsIgnoreCase(nivelObjetivo)) {
-                    datos.add(new String[]{partes[0].trim(), partes[1].trim()});
+                    datos.add(new String[] { partes[0].trim(), partes[1].trim() });
                 }
             }
         }
@@ -38,20 +41,24 @@ public class procesarNivel {
         // Calcular estadísticas
         List<Integer> puntuaciones = new ArrayList<>();
         for (String[] d : datos) {
-            puntuaciones.add(Integer.parseInt(d[1]));
+            try {
+                puntuaciones.add(Integer.parseInt(d[1]));
+            } catch (NumberFormatException ignored) {
+            }
         }
 
         double media = puntuaciones.stream().mapToInt(i -> i).average().orElse(0);
         int max = puntuaciones.stream().max(Integer::compare).orElse(0);
         int min = puntuaciones.stream().min(Integer::compare).orElse(0);
 
-        // Ordenar y mostrar top 5
+        // Ordenar los jugadores de mayor a menor puntuación
         datos.sort((a, b) -> Integer.compare(Integer.parseInt(b[1]), Integer.parseInt(a[1])));
 
+        // Mostrar los resultados
         System.out.println("=== " + nivelObjetivo.toUpperCase() + " ===");
         System.out.println("Top 5 jugadores:");
         datos.stream().limit(5).forEach(d -> System.out.println(d[0] + ", " + d[1]));
-        System.out.println("Media: " + media);
+        System.out.println("Media: " + String.format("%.2f", media));
         System.out.println("Máx: " + max);
         System.out.println("Mín: " + min);
     }

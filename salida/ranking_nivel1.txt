@@ -1,0 +1,8 @@
+=== NIVEL1 ===
+Top 5 jugadores:
+Hugo, 500
+Alex, 320
+Pedro, 275
+Media: 365,00
+Máx: 500
+Mín: 275

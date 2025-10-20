@@ -1,0 +1,11 @@
+Alex, 320, nivel1
+Marta, 150, nivel2
+Pedro, 275, nivel1
+Lucía, 410, nivel3
+Hugo, 500, nivel1
+Carla, 240, nivel2
+Diego, 380, nivel4
+Eva, 330, nivel5
+Noa, 450, nivel3
+Mario, 190, nivel5
+Ana, 600, nivel4
